@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'GmarketSansTTFMedium';
+    src: url('../fonts/GmarketSansTTFMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'GmarketSansTTFMedium', sans-serif !important;
+}
+
+#home {
+    background-image: url('../img/jumbotron.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* 이미지가 컨테이너 중앙에 위치하도록 조정 */
+    height: 100vh;
+    /* 뷰포트의 높이만큼 높이를 설정하여 화면을 꽉 채움 */
+}
+
+nav {
+    z-index: 1000;
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+}
+
+#home a {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: aliceblue;
+}
+
+#rule {
+    background-image: url('../img/GameRule.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+    min-height: 500px;
+    height: 100vh;
+}
+
+#rule h5 {
+    font-size: 15px;
+    /* 텍스트 크기 조정 */
+    font-weight: 700;
+    /* 텍스트 두께 조정 */
+    line-height: 2.2;
+    /* 줄 간격 조정 */
+    color: #000000;
+    /* 텍스트 색상 조정, 여기서는 검정색을 예로 들었습니다 */
+    position: relative;
+    /* 상대적 위치 설정 */
+    top: 120px;
+    /* 상단으로부터 10px 아래로 */
+    left: 350px;
+    /* 왼쪽으로부터 20px 오른쪽으로 */
+}
+
+.jumbotron-text {
+    position: relative;
+    /* 상대적 위치 조정 */
+    z-index: 2;
+    /* 이미지 위에 텍스트가 오도록 z-index 조정 */
+    color: white;
+    /* 텍스트 색상 */
+    padding: 20px;
+    /* 텍스트 주변에 여백 추가 */
+}
+
+.jumbotron>img {
+    z-index: 1;
+    /* 이미지가 텍스트 뒤에 오도록 설정 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* .jumbotron의 전체 높이를 채우도록 수정 */
+    object-fit: cover;
+    /* 이미지 비율을 유지하면서 컨테이너를 가득 채움 */
+}
+
+.display-4 {
+    color: white;
+}
+
+.custom-margin {
+    margin-top: 120px;
+}
+
+.custom-loginmargin {
+    margin-top: 120px;
+}
+
+#messages {
+    height: 300px;
+    /* 적절한 높이 설정 */
+    overflow-y: auto;
+    /* 내용이 넘칠 경우 수직 스크롤바 표시 */
+    border: 1px solid #ccc;
+    /* 경계선 표시 */
+    padding: 10px;
+    /* 내용과 경계선 사이의 여백 */
+    margin-bottom: 20px;
+    /* 양식과의 여백 */
+}
+
+
+/* 로비 전체를 중앙 정렬 */
+#lobby,
+body,
+html {
+    font-family: 'Noto Sans', sans-serif;
+    /* 폰트 설정 */
+    background-color: #f8f9fa;
+    /* 배경색 설정 */
+}
+
+/* 로비 전체를 중앙 정렬 및 스타일링 */
+#lobby {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* 상단 정렬로 변경 */
+    text-align: center;
+    min-height: 100vh;
+    padding-top: 20px;
+    /* 상단 여백 추가 */
+}
+
+/* 방 생성 버튼 스타일 개선 */
+.btn-primary {
+    background-color: #007bff;
+    /* 프라이머리 색상 */
+    border-color: #007bff;
+    /* 테두리 색상 */
+    box-shadow: 0 2px 4px 0 rgba(0, 123, 255, .3);
+    /* 그림자 효과 추가 */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    /* 호버 시 색상 변경 */
+    border-color: #0056b3;
+    /* 호버 시 테두리 색상 변경 */
+}
+
+/* 방 목록과 참여자 목록 스타일링 개선 */
+.list-group {
+    background-color: #ffffff;
+    /* 배경색 설정 */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    /* 그림자 효과 추가 */
+    border-radius: .25rem;
+    /* 모서리 둥글게 처리 */
+    margin-bottom: 1rem;
+    /* 하단 여백 추가 */
+}
+
+.list-group-item {
+    border: none;
+    /* 기본 테두리 제거 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    #lobby .row {
+        flex-direction: column;
+        /* 모바일에서는 컬럼 방향으로 변경 */
+    }
+
+    .col-md-6 {
+        width: 100%;
+        /* 모바일에서 너비 100%로 변경 */
+    }
+}
+
+/* 방 생성 버튼 스타일 */
+#createroom {
+    padding: var(--padding-standard);
+    font-size: var(--font-size-standard);
+    margin-bottom: var(--margin-bottom-standard);
+    cursor: pointer;
+    background-color: #007bff;
+    /* 부트스트랩 기본 파란색 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    /* 버튼 둥글게 */
+    transition: background-color 0.3s;
+    /* 호버 애니메이션 */
+}
+
+#createroom:hover {
+    background-color: #0056b3;
+    /* 호버 시 색상 변경 */
+}
+
+/* 방 목록과 참여자 목록 스타일 */
+#rooms,
+#participants {
+    margin: var(--margin-vertical);
+    width: var(--width-standard);
+    max-width: var(--max-width-standard);
+    border: 1px solid #ddd;
+    /* 테두리 추가 */
+    border-radius: 5px;
+    /* 모서리 둥글게 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+
+    #rooms,
+    #participants {
+        width: 90%;
+        /* 모바일 화면에서는 너비 조정 */
+    }
+}
